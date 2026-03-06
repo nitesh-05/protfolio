@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -42,13 +43,15 @@ export default function Hero() {
       </motion.p>
 
       {/* Animated Button */}
-      <motion.button
-        className="mt-8 bg-black text-white px-8 py-3 rounded-lg"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        View My Work
-      </motion.button>
+      <Link href="https://demo-client-omega-lyart.vercel.app/" target="_blank">
+        <motion.button
+          className="mt-8 bg-black text-white px-8 py-3 rounded-lg"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          View My Work
+        </motion.button>
+      </Link>
     </section>
   );
 }
